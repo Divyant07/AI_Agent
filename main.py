@@ -3,6 +3,8 @@ from pydantic import BaseModel
 from langchain_openai import ChatOpenAI
 from langchain_anthropic import ChatAnthropic
 
-load_dotenv
+load_dotenv()
 
 llm = ChatOpenAI(model="gpt-4o-mini")
+response = llm.invoke("Who is Illaoi in League of Legends?")
+print(response)
